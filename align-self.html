@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fundamentos align-self</title>
+    <style>
+        .container{
+            display: flex;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            max-width: 350px;
+
+        }
+
+        .align-container{
+            align-items: center;
+        }
+
+        .item{
+            background-color: aquamarine;
+            margin: 5px;
+            font-size: 24px;
+            text-align: center;
+            flex: 1;
+            
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .center{
+            align-self: center;
+        }
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+        
+        .baseline{
+            align-self: baseline;
+
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Row:</h1>
+    <h3>align-self: auto / container: align-items:center</h3>
+    <div class="container align-container">
+        <div class="item auto">aaa</div>
+        <div class="item auto">b</div>
+        <div class="item auto">cccccc cccc ccccccc</div>
+        <div class="item auto">d</div>
+    </div>
+    <h3>align-self: mix / container: align-items: default</h3>
+    <div class="container">
+        <div class="item center">aaa</div>
+        <div class="item start">b</div>
+        <div class="item stretch">cccccc cccc ccccccc</div>
+        <div class="item end">d</div>
+    </div>
+    <h1>Column:</h1>
+    <h3>align-self: auto / container: align-items:center</h3>
+    <div class="container align-container column">
+        <div class="item auto">aaa</div>
+        <div class="item auto">b</div>
+        <div class="item auto">cccccc cccc ccccccc</div>
+        <div class="item auto">d</div>
+    </div>
+    <h3>align-self: mix / container: align-items: default</h3>
+    <div class="container column">
+        <div class="item center">aaa</div>
+        <div class="item start">b</div>
+        <div class="item stretch">cccccc cccc ccccccc</div>
+        <div class="item end">d</div>
+    </div>
+    
+</body>
+</html>

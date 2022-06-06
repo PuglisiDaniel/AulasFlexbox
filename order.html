@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos order</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 20px;
+            display: flex;
+
+        }
+
+        .item{
+            color: black;
+            background-color: burlywood;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .o1{
+            order: 1;
+        }
+
+        .o2{
+            order:2;
+        }
+        .o3{
+            order: 3;
+        }
+        .o4{
+            order: 4;
+        }
+        .o-1{
+            order: -1;
+        }
+        .o-2{
+            order: -2;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Row:</h1>
+    <h3>Order: 0</h3>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <h3>Order: mix</h3>
+    <div class="container">
+        <div class="item o2">1</div>
+        <div class="item o3">2</div>
+        <div class="item o4">3</div>
+        <div class="item o1">4</div>
+        
+    </div>
+    <h1>Column: </h1>
+    <h3>Order: 0</h3>
+    <div class="container column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <h3>Order: mix</h3>
+    <div class="container column">
+        <div class="item o2">1</div>
+        <div class="item o-2">2</div>
+        <div class="item o4">3</div>
+        <div class="item o1">4</div>
+        <div class="item o-1">5</div>
+        <div class="item o-2">7</div>
+        <div class="item o1">6</div>
+        
+    </div>
+    
+</body>
+</html>
